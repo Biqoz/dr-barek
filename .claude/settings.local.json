@@ -5,7 +5,10 @@
       "Bash(gh repo create:*)",
       "Bash(npm install:*)",
       "Bash(npx next:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(npx shadcn@latest init -y)",
+      "Bash(npx shadcn@latest init:*)",
+      "Bash(npx shadcn@latest add:*)"
     ],
     "deny": [],
     "ask": []

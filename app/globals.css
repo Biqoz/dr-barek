@@ -58,20 +58,61 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #e8d6c4 #e8d6c4;
+  scrollbar-color: hsl(var(--accent)) hsl(var(--background));
 }
 
 *::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #ffffff;
-  border-radius: 5px;
+  background: hsl(var(--background));
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #e8d6c4;
-  border-radius: 14px;
-  border: 3px solid #ffffff;
+  background-color: hsl(var(--accent));
+  border-radius: 10px;
+  border: 2px solid hsl(var(--background));
+}
+
+
+
+@layer base {
+  :root {
+    /* Palette Stone avec accent beige subtil */
+    --background: 40 40% 98%;           /* Blanc cassé chaud */
+    --foreground: 25 5% 15%;            /* Presque noir chaud */
+    --card: 0 0% 100%;                  /* Blanc pur pour les cartes */
+    --card-foreground: 25 5% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 5% 15%;
+    --primary: 25 5% 15%;               /* Boutons principaux - sombre */
+    --primary-foreground: 40 40% 98%;
+    --secondary: 35 20% 95%;            /* Beige très clair */
+    --secondary-foreground: 25 5% 15%;
+    --muted: 35 15% 93%;                /* Sections alternées */
+    --muted-foreground: 25 5% 45%;      /* Texte secondaire */
+    --accent: 32 25% 85%;               /* Beige doux - accent */
+    --accent-foreground: 25 5% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 35 15% 88%;               /* Bordures subtiles */
+    --input: 35 15% 88%;
+    --ring: 32 25% 70%;                 /* Focus ring beige */
+    --radius: 0.75rem;
+
+    /* Custom */
+    --warm: 32 30% 80%;                 /* Beige pour highlights */
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

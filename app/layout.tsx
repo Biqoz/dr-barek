@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import Navbar from "./components/Header/Navbar";
+import TopBanner from "./components/TopBanner";
+import NewNavbar from "./components/Header/NewNavbar";
 import Footer from "./components/Footer/Footer";
-import Sidebar from "./components/Header/Sidebar";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.cergydentiste.fr"), // Correction ajoutée ici
@@ -138,10 +138,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
-      <body className={` font-MuktaRegular text-[#3F3f3f] bg-[#e8d6c4]`}>
-        <Sidebar />
-        <Navbar />
-        {children}
+      <body className="font-MuktaRegular antialiased">
+        <TopBanner />
+        <NewNavbar />
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

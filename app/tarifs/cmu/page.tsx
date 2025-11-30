@@ -1,63 +1,108 @@
-"use client";
-import Image from "next/image";
+import { Metadata } from "next";
+import Link from "next/link";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "CMU-CSS - Complémentaire Santé Solidaire",
+  description: "Soins dentaires pris en charge intégralement pour les bénéficiaires de la CMU-CSS à Cergy.",
+};
+
+export default function CMUPage() {
   return (
-    <main className="flex min-h-screen w-full flex-col items-center justify-center p-6 pt-28">
-      <section className="w-full max-w-7xl space-y-6">
-        <h2 className="center w-full rounded-xl border border-black bg-white p-6 text-xl font-bold shadow-[3px_3px_0px_0px]">
-          CMU-CSS
-        </h2>
+    <main className="min-h-screen pt-32 pb-20">
+      <div className="max-w-3xl mx-auto px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-12">
+          <Link
+            href="/#tarifs"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-4 inline-block"
+          >
+            ← Retour
+          </Link>
+          <h1 className="text-3xl md:text-4xl font-Globale mb-4">
+            CMU-CSS acceptée
+          </h1>
+          <p className="text-lg text-muted-foreground">
+            Bénéficiaires de la Complémentaire Santé Solidaire, nous vous accueillons
+            sans avance de frais pour l&apos;ensemble des soins couverts.
+          </p>
+        </div>
 
-        <div className="w-full rounded-xl border border-black p-6 text-lg shadow-[3px_3px_0px_0px]">
-          <div className="space-y-6">
-            <div className="rounded-lg border-2 border-dashed border-black p-4 bg-gray-50">
-              <p>
-                Chez Dr Barek, nous nous engageons à vous offrir les meilleurs
-                soins dentaires sans avance de frais pour les bénéficiaires de
-                la CMU.
-              </p>
-            </div>
+        {/* Content */}
+        <div className="space-y-10">
+          <div>
+            <h2 className="text-lg font-medium mb-4">Soins pris en charge</h2>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 shrink-0" />
+                Consultations et soins dentaires courants
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 shrink-0" />
+                Détartrage et traitement des caries
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 shrink-0" />
+                Extractions dentaires
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 shrink-0" />
+                Prothèses du panier CMU (couronnes, bridges, appareils)
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 shrink-0" />
+                Urgences dentaires
+              </li>
+            </ul>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="rounded-lg border-2 border-dashed border-black p-4">
-                <h3 className="text-xl font-semibold mb-2">
-                  Prise en charge incluse
-                </h3>
-                <ul className="list-inside list-disc space-y-2">
-                  <li>Soins dentaires courants</li>
-                  <li>Prothèses conformes (couronnes, bridges, appareils)</li>
-                  <li>Traitements urgents</li>
-                </ul>
-              </div>
+          <div>
+            <h2 className="text-lg font-medium mb-4">Non couvert par la CMU</h2>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-1.5 shrink-0" />
+                Implants dentaires
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-1.5 shrink-0" />
+                Prothèses hors panier (options esthétiques)
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-1.5 shrink-0" />
+                Orthodontie adulte
+              </li>
+            </ul>
+          </div>
 
-              <div className="rounded-lg border-2 border-dashed border-black p-4">
-                <h3 className="text-xl font-semibold mb-2">Limitations</h3>
-                <ul className="list-inside list-disc space-y-2">
-                  <li>Implants dentaires non couverts</li>
-                  <li>Remboursement partiel des couronnes</li>
-                </ul>
-              </div>
-            </div>
+          <div>
+            <h2 className="text-lg font-medium mb-4">Documents à apporter</h2>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 shrink-0" />
+                Carte Vitale à jour
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 shrink-0" />
+                Attestation de droits CMU-CSS en cours de validité
+              </li>
+            </ul>
+          </div>
 
-            <div className="rounded-lg border-2 border-dashed border-black p-4">
-              <h3 className="text-xl font-semibold mb-2">Documents requis</h3>
-              <ul className="list-inside list-disc space-y-2">
-                <li>Carte Vitale à jour</li>
-                <li>Attestation de droits CMU valide</li>
-              </ul>
-            </div>
-
-            <div className="rounded-xl border border-black bg-white p-6 text-center shadow-[3px_3px_0px_0px]">
-              <p className="text-lg font-medium">
-                Nous gérons toutes les démarches administratives
-                <br />
-                Prise de rendez-vous urgente possible
-              </p>
-            </div>
+          {/* CTA */}
+          <div className="pt-6 border-t border-border">
+            <p className="text-sm text-muted-foreground mb-4">
+              Nous gérons toutes les démarches administratives pour vous.
+            </p>
+            <a
+              href="https://www.doctolib.fr/dentiste/cergy/samy-barek"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-white bg-foreground rounded-full hover:bg-foreground/90 transition-colors"
+            >
+              Prendre rendez-vous
+            </a>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }

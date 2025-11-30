@@ -1,66 +1,126 @@
-"use client";
-import Image from "next/image";
+import { Metadata } from "next";
+import Link from "next/link";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Facilités de Paiement",
+  description: "Échelonnez vos soins dentaires en plusieurs fois sans frais. Cabinet dentaire à Cergy.",
+};
+
+export default function FacilitePaiementPage() {
   return (
-    <main className="flex min-h-screen w-full flex-col items-center justify-center p-6 pt-28">
-      <section className="w-full max-w-7xl space-y-6">
-        <h2 className="center w-full rounded-xl border border-black bg-white p-6 text-xl font-bold shadow-[3px_3px_0px_0px]">
-          FACILITÉS DE PAIEMENT
-        </h2>
+    <main className="min-h-screen pt-32 pb-20">
+      <div className="max-w-3xl mx-auto px-6 lg:px-8">
+        {/* Header */}
+        <div className="mb-12">
+          <Link
+            href="/#tarifs"
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors mb-4 inline-block"
+          >
+            ← Retour
+          </Link>
+          <h1 className="text-3xl md:text-4xl font-Globale mb-4">
+            Facilités de paiement
+          </h1>
+          <p className="text-lg text-muted-foreground">
+            Pour les traitements importants, nous proposons des solutions
+            d&apos;échelonnement adaptées à votre budget.
+          </p>
+        </div>
 
-        <div className="w-full rounded-xl border border-black p-6 text-lg shadow-[3px_3px_0px_0px]">
-          <div className="space-y-6">
-            <div className="rounded-lg border-2 border-dashed border-black p-4 bg-gray-50">
-              <p>
-                Chez le Dr Barek, nous adaptons nos solutions de paiement à
-                votre situation pour un accès aux soins sans stress financier.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="rounded-lg border-2 border-dashed border-black p-4">
-                <h3 className="text-xl font-semibold mb-2">
-                  Options disponibles
-                </h3>
-                <ul className="list-inside list-disc space-y-2">
-                  <li>Paiement en 3 fois sans frais</li>
-                  <li>Échelonnement sur mesure</li>
-                  <li>Prise en charge tiers payeur</li>
-                </ul>
+        {/* Content */}
+        <div className="space-y-10">
+          <div>
+            <h2 className="text-lg font-medium mb-4">Options disponibles</h2>
+            <div className="space-y-3">
+              <div className="flex gap-4 p-4 rounded-xl bg-muted/50">
+                <div>
+                  <p className="text-sm font-medium mb-1">Paiement en 3 fois</p>
+                  <p className="text-sm text-muted-foreground">
+                    Sans frais, idéal pour les soins de 300€ à 1000€
+                  </p>
+                </div>
               </div>
-
-              <div className="rounded-lg border-2 border-dashed border-black p-4">
-                <h3 className="text-xl font-semibold mb-2">Avantages</h3>
-                <ul className="list-inside list-disc space-y-2">
-                  <li>Aucun acompte requis</li>
-                  <li>Pas de frais supplémentaires</li>
-                  <li>Plans adaptés à votre budget</li>
-                </ul>
+              <div className="flex gap-4 p-4 rounded-xl bg-muted/50">
+                <div>
+                  <p className="text-sm font-medium mb-1">Échelonnement jusqu&apos;à 12 mois</p>
+                  <p className="text-sm text-muted-foreground">
+                    Pour les traitements plus importants (implants, prothèses complètes)
+                  </p>
+                </div>
               </div>
-            </div>
-
-            <div className="rounded-lg border-2 border-dashed border-black p-4">
-              <h3 className="text-xl font-semibold mb-2">
-                Démarche simplifiée
-              </h3>
-              <ol className="list-inside list-decimal space-y-2">
-                <li>Estimation précise des coûts lors de la consultation</li>
-                <li>Validation du plan de paiement personnalisé</li>
-                <li>Mise en place immédiate des échéances</li>
-              </ol>
-            </div>
-
-            <div className="rounded-xl border border-black bg-white p-6 text-center shadow-[3px_3px_0px_0px]">
-              <p className="text-lg font-medium">
-                Discutons ensemble de votre projet de soins
-                <br />
-                Solutions flexibles et confidentielles
-              </p>
+              <div className="flex gap-4 p-4 rounded-xl bg-muted/50">
+                <div>
+                  <p className="text-sm font-medium mb-1">Plan personnalisé</p>
+                  <p className="text-sm text-muted-foreground">
+                    Nous adaptons les mensualités à votre situation
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
+
+          <div>
+            <h2 className="text-lg font-medium mb-4">Notre engagement</h2>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 shrink-0" />
+                Aucun acompte obligatoire
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 shrink-0" />
+                Pas de frais supplémentaires
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 shrink-0" />
+                Devis détaillé avant engagement
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-foreground mt-1.5 shrink-0" />
+                Confidentialité totale
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="text-lg font-medium mb-4">Comment ça marche</h2>
+            <div className="space-y-3">
+              <div className="flex gap-4 p-4 rounded-xl bg-muted/50">
+                <span className="text-sm text-muted-foreground/60 w-5 shrink-0">1</span>
+                <p className="text-sm">
+                  Consultation et devis détaillé gratuit
+                </p>
+              </div>
+              <div className="flex gap-4 p-4 rounded-xl bg-muted/50">
+                <span className="text-sm text-muted-foreground/60 w-5 shrink-0">2</span>
+                <p className="text-sm">
+                  On définit ensemble le plan de paiement adapté
+                </p>
+              </div>
+              <div className="flex gap-4 p-4 rounded-xl bg-muted/50">
+                <span className="text-sm text-muted-foreground/60 w-5 shrink-0">3</span>
+                <p className="text-sm">
+                  Début des soins sans attendre
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="pt-6 border-t border-border">
+            <p className="text-sm text-muted-foreground mb-4">
+              Parlons de votre projet sans engagement.
+            </p>
+            <a
+              href="https://www.doctolib.fr/dentiste/cergy/samy-barek"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-white bg-foreground rounded-full hover:bg-foreground/90 transition-colors"
+            >
+              Prendre rendez-vous
+            </a>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
