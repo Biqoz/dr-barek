@@ -3,9 +3,9 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 
 interface CarteProps {
-  title: string | JSX.Element;
+  title: React.ReactNode;
   videoUrl?: string;
-  modalTitle?: string | JSX.Element;
+  modalTitle?: React.ReactNode;
   buttonText?: string;
   buttonLink?: string;
   description?: string;
