@@ -138,7 +138,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </head>
-      <body className={` font-MuktaRegular text-[#3F3f3f] bg-[#e8d6c4]`}>
+      <body className={` font-MuktaRegular text-[#3F3f3f] bg-[#DFECF2]`}>
         <Sidebar />
         <Navbar />
         {children}

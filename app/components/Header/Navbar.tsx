@@ -87,7 +87,7 @@ const NavBar = () => {
     <>
       <nav
         className={` pointer-events-auto fixed z-[1000] flex h-24 w-full items-center justify-between px-12 pt-6 ${
-          isScrolled ? "bg-[#e8d6c4]/50 backdrop-blur-md" : ""
+          isScrolled ? "bg-[#DFECF2]/50 backdrop-blur-md" : ""
         } transition-all duration-300`}
       >
         <Link
@@ -142,7 +142,7 @@ const NavBar = () => {
       </nav>
 
       <div
-        className={`fixed inset-0 z-[999] bg-[#e8d6c4] transition-all duration-500 ${
+        className={`fixed inset-0 z-[999] bg-[#DFECF2] transition-all duration-500 ${
           isOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
       >

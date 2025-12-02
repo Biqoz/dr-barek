@@ -28,7 +28,7 @@ const Footer = () => {
           <div className="flex w-full flex-1 items-center justify-center">
             <a
               href="tel:0184244699"
-              className="flex h-full w-full items-center justify-center rounded-l-xl border invert hover:bg-[#e8d6c4] hover:invert-0"
+              className="flex h-full w-full items-center justify-center rounded-l-xl border invert hover:bg-[#DFECF2] hover:invert-0"
             >
               <Image
                 src="/icon/Iphone.png"
@@ -38,7 +38,7 @@ const Footer = () => {
               />
             </a>
           </div>
-          <div className="flex w-full flex-1 items-center justify-center invert hover:bg-[#e8d6c4] hover:invert-0">
+          <div className="flex w-full flex-1 items-center justify-center invert hover:bg-[#DFECF2] hover:invert-0">
             <a
               href="https://www.doctolib.fr/dentiste/cergy/samy-barek"
               target="_blank"
@@ -61,7 +61,7 @@ const Footer = () => {
             </a>{" "}
           </div>
 
-          <div className="flex w-full flex-1 items-center justify-center rounded-r-xl border invert hover:bg-[#e8d6c4] hover:invert-0">
+          <div className="flex w-full flex-1 items-center justify-center rounded-r-xl border invert hover:bg-[#DFECF2] hover:invert-0">
             {isMobile ? (
               <a
                 onClick={(e) => {
@@ -96,10 +96,10 @@ const Footer = () => {
           </div>
         </section>
       </main>
-      <section className="flex w-full items-center justify-center rounded-xl border border-black bg-[#e8d6c4] p-3 text-center text-sm   shadow-[3px_3px_0px_0px]">
+      <section className="flex w-full items-center justify-center rounded-xl border border-black bg-[#DFECF2] p-3 text-center text-sm   shadow-[3px_3px_0px_0px]">
         © Copyright 2025 - Cergydentiste.fr
       </section>
-      <section className="flex w-full items-center justify-center rounded-xl border border-black bg-[#e8d6c4] p-3 text-center text-sm  shadow-[3px_3px_0px_0px]">
+      <section className="flex w-full items-center justify-center rounded-xl border border-black bg-[#DFECF2] p-3 text-center text-sm  shadow-[3px_3px_0px_0px]">
         <Link href="/mentions-legales" className="hover:text-white">
           Mention legales{" "}
         </Link>

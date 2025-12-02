@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Qui_est_le_Dr_Barek = () => {
   return (
-    <section className="w-full flex flex-col justify-center items-center h-full text-center py-7 px-3 space-y-5 ">
+    <section className="w-full flex flex-col justify-center items-center h-full text-center py-7 px-3 space-y-5 bg-[#DFECF2]">
       <div className="w-full sm:w-2/3 flex  sm:flex-row justify-between items-center h-[clamp(200px,calc(25vw_+_5vw),750px)]  ">
         <div className="w-1/2 h-full flex flex-col relative justify-center items-center ">
           <div className="w-[clamp(255px,calc(25vw_+_5vw),500px)] relative  flex flex-col justify-center items-center font-Globale ">
@@ -23,20 +23,20 @@ const Qui_est_le_Dr_Barek = () => {
               className="w-full h-auto object-cover"
             />
             <div className="-mt-5 text-[clamp(11px,2.5vw,31px)] ">
-            <p className="text-8xl">P</p>  
+            <span className="text-8xl">P</span>
             </div>
           </div>
         </div>
 
         <div className="w-1/2 flex-1 h-full flex flex-col justify-center items-center space-y-4 ">
           <h1 className="text-[clamp(20px,2vw,24px)] font-Globale inline-block ">
-          <p className="text-8xl">Q</p> 
+          <span className="text-8xl">Q</span>
           </h1>
           <h2 className="text-[clamp(14px,1.5vw,16px)]">
-          <p className="text-8xl">R</p> 
+          <span className="text-8xl">R</span>
           </h2>
           <p className="text-[clamp(12px,1vw,14px)] text-center">
-          <p className="text-8xl">S</p> 
+          <span className="text-8xl">S</span>
           </p>
         </div>
       </div>
